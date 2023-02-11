@@ -7,7 +7,7 @@ let days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 let day = days[now.getDay()];
 let hours = now.getHours();
@@ -25,8 +25,8 @@ function showWeather(response) {
 
 function search(city) {
   let apiKey = "2d96d64425dca1d6eda00d942a281c0d";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-  axios.get(apiUrl).then(showWeather);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial`;
+  axios.get(`${apiUrl}&appid=${apiKey}`).then(showWeather);
 }
 
 function handleSubmit(event) {
