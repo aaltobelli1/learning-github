@@ -28,10 +28,16 @@
     <div class="container">
       <form id="search-form">
         <input type="text" placeholder="Location" id="city-input" />
-        <input type="Submit" />
+        <input type="Submit" class="btn btn-primary" value="search" />
+        <input
+          type="submit"
+          class="btn btn-secondary"
+          value="current"
+          id="current-location-btn"
+        />
       </form>
       <h1 id="current-city"></h1>
-      <button id="current-location-btn">Current Location</button>
+
       <h2>
         <div class="temp" id="current-temp">°</div>
         <div class="current">Current</div>
