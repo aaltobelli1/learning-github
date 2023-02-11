@@ -36,9 +36,7 @@ function handleSubmit(event) {
 }
 function showPosition(position) {
   let apiKey = "2d96d64425dca1d6eda00d942a281c0d";
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${lposition.coords.longitude}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(showWeather);
 }
 function getCurrentLocation(event) {
@@ -56,4 +54,4 @@ searchForm.addEventListener("submit", handleSubmit);
 let button = document.querySelector("#current-location-btn");
 button.addEventListener("click", getCurrentLocation);
 
-search("New York");
+search("Chicago");
