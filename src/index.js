@@ -18,7 +18,7 @@ if (minutes < 10) {
 h3.innerHTML = `${day} ${hours}:${minutes}`;
 
 function showWeather(response) {
-  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#current-city").innerHTML = response.data.name;
   document.querySelector("#current-temp").innerHTML = Math.round(
     response.data.main.temp
   );
