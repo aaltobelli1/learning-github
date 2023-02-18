@@ -25,68 +25,56 @@
     />
   </head>
   <body>
-    <div class="container">
-      <form id="search-form">
-        <input type="text" placeholder="Location" id="city-input" />
-        <input type="Submit" class="btn btn-primary" value="search" />
-        <input
-          type="submit"
-          class="btn btn-secondary"
-          value="current"
-          id="current-location-btn"
-        />
-      </form>
-      <h1 id="current-city"></h1>
-
-      <h2>
-        <div class="temp" id="current-temp">°F</div>
-        <div class="current">Current</div>
-        <div id="description"></div>
-      </h2>
-      <h3></h3>
-
-      <div class="row.col-5"></div>
-      <div class="card-deck">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">31°F/21°F</h5>
-          </div>
-
-          <div class="card-footer">Friday</div>
+  <div class="container">
+      <div class ="weather-app-wrapper">
+      <div class ="weather-app">
+        <form id="search-form" class="mb-3" >
+          <div class="row">
+            <div class="col-9">
+          <input type="search" placeholder="Type a city" class=" form-contol" id="city-input"/>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">37°F/28°F</h5>
-          </div>
-
-          <div class="card-footer">Saturday</div>
+          <div class="col-3">
+          <input type ="submit" value="Search" class="btn btn-primary w-100"/>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">44°F/37°F</h5>
-          </div>
-
-          <div class="card-footer">Sunday</div>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">49°F/40°F</h5>
-          </div>
-
-          <div class="card-footer">Monday</div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">42°F/35°F</h5>
-          </div>
-
-          <div class="card-footer">Tuesday</div>
-        </div>
-      </div>
+        </form>
+        <div class="overview">
+    <h1 id="city"></h1>
+    <ul>
+      <li id="date">Monday 9:30AM</li>
+      <li id="description">Sunny</li>
+    </ul>
     </div>
-    <a href="https://github.com/aaltobelli1/learning-github/" id="github-link">
-      Coded by Amanda Altobelli
-    </a>
-    <script src="src/index.js"></script>
+      <form>
+        <div class="row">
+          <div class="col-6">
+            <div class="d-flex weather-temperature">
+  <img src="" alt="Clear" id="icon" class="float-left" />
+  <div>
+    <strong id="temperature"></strong
+    ><span class="units"> <strong id="temperature"></strong>°F | <a href="#" id="celcius-link">°C</a></span>
+  </div>
+</div>
+          </div>
+          <div class="col-md-6">
+            <ul>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> MPH</li>
+            </ul>
+          </div>
+          </div>
+      </form>
+      <small>
+            <a href="https://github.com/aaltobelli1/learning-github/" id="github-link">
+              open-source code by Amanda Altobelli
+            </a></small
+          >
+      </div>
+
+      <script src="src/app.js"></script>
+    </div>
   </body>
 </html>
+
+    
+     
